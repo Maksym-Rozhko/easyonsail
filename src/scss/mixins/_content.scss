@@ -1,0 +1,125 @@
+@mixin btn-main {
+    width: 100%;
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+    border-radius: 4px;
+    transition: all ease-in-out .4s;
+}
+
+@mixin title {
+    font-family: 'Prosto One', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@mixin socials {
+    .socials {
+        .list {
+            @include flex-all-center;
+            gap: 13px;
+
+            &__link {
+                @include flex-all-center;
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+
+                .icon {
+                    width: 15px;
+                    height: 15px;
+                    fill: var(--white);
+                    transition: all ease-in-out .4s;
+                }
+
+                &:hover {
+                    .icon {
+                        transform: scale(1.5) translateY(-5px);
+                    }
+                    .icon.telegram {
+                        fill: #0088CC;
+                    }
+                    .icon.youtube {
+                        fill: #FF0000;
+                    }
+                    .icon.twitter,
+                    .icon.linkedin {
+                        fill: #1DA1F2;
+                    }
+                    .icon.instagram {
+                        fill: #DD2A7B;
+                    }
+                    .icon.facebook {
+                        fill: #3b5998;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin breadcrumbs {
+    font-family: '', sans-serif;
+    @include flex-all-center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-bottom: 15px;
+    max-width: fit-content;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--cs-light-grey);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 4px;
+        background-color: var(--cs-red);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    a {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        color: var(--cs-light-grey);
+        transition: color ease-in-out .4s;
+
+        &:hover {
+            color: var(--cs-red);
+        }
+    }
+
+    .divider {
+        position: relative;
+        margin: 0 10px;
+
+        &::before {
+            position: absolute;
+            content: "/";
+            font-size: 14px;
+            line-height: 140%;
+            color: var(--cs-light-grey);
+            top: calc(50% - 9px);
+            right: -2px;
+        }
+    }
+}
