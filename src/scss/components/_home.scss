@@ -864,3 +864,101 @@
         }
     }
 }
+
+.subscribe {
+    position: relative;
+    padding: 153px 0;
+    background-image: url('../images/home/subscribe-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    background-color: var(--cs-accent-2);
+
+    &__container {
+        max-width: 961px;
+        margin-left: 155px;
+
+    }
+
+    &__subtitle {
+        font-family: 'Graphik', sans-serif;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0.26em;
+        color: var(--cs-grey);
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 98.5%;
+        letter-spacing: -0.05em;
+        color: var(--cs-dark);
+        margin-top: 61px;
+        margin-bottom: 40px;
+        max-width: 631px;
+
+        span {
+            color: #F8FAFF;
+        }
+    }
+
+    .form {
+        &__group {
+            @include flex-v-center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        &__label {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            margin-bottom: 6px;
+            display: block;
+        }
+        &__input {
+            max-width: 446px;
+            width: 100%;
+            background: #F8FAFF;
+            backdrop-filter: blur(20px);
+            padding: 14px 20px;
+            font-family: 'Graphik', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 180%;
+            border: none;
+            color: var(--cs-dark);
+
+            &::placeholder {
+                opacity: .5;
+            }
+        }
+        &__btn {
+            @include flex-all-center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--cs-dark);
+
+            svg {
+                color: var(--cs-accent-2);
+                transition: all ease-in-out .4s;
+            }
+
+            &:hover {
+                svg {
+                    transform: scale(1.2);
+                    color: var(--cs-accent-1);
+                }
+            }
+        }
+
+        .custom-checkbox {
+            @include custom-checkbox;
+            @include flex-v-center;
+        }
+    }
+}

@@ -90,6 +90,28 @@
             max-width: 600px;
         }
     }
+    .subscribe {
+        padding: 100px 0;
+        background-image: none;
+
+        &__container {
+            margin: 0 auto;
+            max-width: 630px;
+        }
+
+        &__subtitle {
+            display: block;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form {
+            &__input {
+                max-width: inherit;
+            }
+        }
+    }
 }
 
 @include tablet {
@@ -320,6 +342,14 @@
                 font-size: 16px;
                 line-height: 160%;
             }
+        }
+    }
+    .subscribe {
+        padding: 50px 0;
+
+        h2 {
+            margin-top: 20px;
+            font-size: 30px;
         }
     }
 };
