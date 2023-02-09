@@ -773,3 +773,94 @@
         }
     }
 }
+
+
+.reviews {
+    background-color: #F8FAFF;
+    padding: 100px 0;
+
+    h2 {
+        font-family: 'Graphik', sans-serif;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0.26em;
+        text-align: center;
+        color: var(--cs-dark);
+        margin-top: 0;
+        margin-bottom: 42px;
+    }
+
+    .review {
+        max-width: 870px;
+        width: 100%;
+        text-align: center;
+
+        img {
+            border-radius: 50%;
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-family: 'Graphik', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 180%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: var(--cs-grey);
+        }
+
+        span {
+            font-family: 'Graphik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 180%;
+            color: var(--cs-dark);
+            opacity: .5;
+        }
+    }
+
+    .swiper-scrollbar {
+        background-color: rgba(18, 34, 61, 0.1);
+        position: static;
+        margin-top: 40px;
+        height: 2px;
+        cursor: pointer;
+
+        .swiper-scrollbar-drag {
+            background-color: var(--cs-accent-2);
+        }
+    }
+
+    &__all {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 110%;
+        letter-spacing: -0.05em;
+        color: var(--cs-grey);
+        @include flex-all-center;
+        margin-top: 40px;
+
+        a {
+            color: var(--cs-grey);
+            border-bottom: 1px solid var(--cs-grey);
+            margin: 0 4px;
+        }
+
+        svg {
+            margin-left: 10px;
+        }
+    }
+}

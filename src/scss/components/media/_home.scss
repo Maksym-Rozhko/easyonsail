@@ -85,6 +85,11 @@
             }
         }
     }
+    .reviews {
+        .review {
+            max-width: 600px;
+        }
+    }
 }
 
 @include tablet {
@@ -304,6 +309,16 @@
                 p {
                     -webkit-line-clamp: 3;
                 }
+            }
+        }
+    }
+    .reviews {
+        padding: 50px 0;
+
+        .review {
+            p {
+                font-size: 16px;
+                line-height: 160%;
             }
         }
     }

@@ -1,5 +1,5 @@
-import Swiper, { Navigation } from 'swiper';
-Swiper.use([Navigation]);
+import Swiper, { Navigation, Scrollbar, Mousewheel } from 'swiper';
+Swiper.use([Navigation, Scrollbar, Mousewheel]);
 
 new Swiper('.swiper.ragions__slider', {
     slidesPerView: 3,
@@ -77,5 +77,35 @@ new Swiper('.swiper.blogs__slider', {
             slidesPerView: 2,
             spaceBetween: 10,
         },
+    },
+});
+
+new Swiper('.swiper.reviews__slider', {
+    slidesPerView: 2.1,
+    spaceBetween: 90,
+    initialSlide: 1,
+    centeredSlides: true,
+    speed: 1000,
+    mousewheel: true,
+    loop: true,
+
+    breakpoints: {
+        320: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 1.6,
+            spaceBetween: 45,
+        },
+        1280: {
+            slidesPerView: 2.1,
+            spaceBetween: 90,
+        },
+    },
+
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
     },
 });
