@@ -1,3 +1,156 @@
-@include mobile {
+@include big-desktop {
+    .header {
+        &__top {
+            padding-left: 30px;
+        }
+        &__bottom {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
 
+        .nav {
+            ul {
+                gap: 0 20px;
+            }
+        }
+    }
+}
+
+@include small-desktop {
+    .header {
+        &__right {
+            max-width: 280px;
+        }
+    }
+}
+
+@include tablet {
+    .header {
+        .logo {
+            padding-left: 15px;
+            padding-right: 45px;
+        }
+        .nav {
+            ul {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .header {
+        &__top {
+            padding-left: 15px;
+        }
+        &__bottom {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .logo {
+            padding-left: 0;
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        .nav {
+            display: none;
+        }
+        .burger {
+            display: flex;
+        }
+        .socials {
+            display: none;
+        }
+        .mobile-menu {
+            display: flex;
+
+            .logo {
+                display: block;
+                padding-right: 0;
+                text-align: center;
+                max-width: fit-content;
+                margin: 0 auto;
+
+                img {
+                    min-width: 200px;
+                }
+            }
+
+            .socials {
+                @include flex-all-center;
+                flex-direction: column;
+
+                span {
+                    color: var(--white);
+                    font-size: 20px;
+                }
+
+                .list {
+                    gap: 5px;
+
+                    &__link {
+                        width: 35px;
+                        height: 35px;
+
+                        .icon {
+                            fill: var(--white);
+                        }
+                    }
+                }
+            }
+
+            .btn-main {
+                display: none;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        .logo {
+            padding-right: 0;
+            padding-right: 15px;
+            margin-left: 10px;
+        }
+        &__link:first-child {
+            display: none;
+        }
+        &__links-group {
+            .btn-main {
+                &--blue {
+                    padding: 28px 8px;
+                }
+                &--login {
+                    padding: 27px 8px;
+                }
+            }
+        }
+    }
+}
+
+@include small-mobile {
+    .header {
+        &__links-group {
+            justify-content: flex-end;
+
+            .btn-main {
+                &--blue {
+                    max-width: 120px;
+                }
+                &--login {
+                    display: none;
+                }
+            }
+        }
+        .mobile-menu {
+            .btn-main {
+                @include flex-all-center;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 10px;
+                gap: 10px;
+                color: var(--white);
+            }
+        }
+    }
 }

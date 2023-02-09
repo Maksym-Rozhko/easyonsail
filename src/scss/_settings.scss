@@ -12,8 +12,9 @@ body {
     font-family: var(--font-family);
     font-size: 16px;
     line-height: 19px;
-    background-color: var(--white);
-    color: var(--cs-grey);
+    // background-color: var(--cs-light);
+    background-color: var(--cs-dark);
+    color: var(--cs-dark);
     overflow-x: hidden;
 }
 

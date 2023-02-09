@@ -1,6 +1,9 @@
 <header class="header">
     <div class="header__container">
         <div class="header__top">
+            <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+                <span class="burger__line"></span>
+            </button>
             <nav class="nav">
                 <ul class="menu">
                     <li>
@@ -36,29 +39,113 @@
             </a>
             <div class="header__right">
                 <div class="header__links-group">
-                    <a href="" class="btn-main" type="button">
+                    <a href="" class="btn-main btn-main--waves btn-main--blue" type="button">
                         Fast Quote
+                        <div class="waves">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </a>
-                    <a href="#" class="btn-main">
+                    <a href="#" class="btn-main btn-main--login">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.916992 14.4393C0.916992 14.7949 1.205 15.0833 1.56092 15.0833C1.91685 15.0833 2.20486 14.7949 2.20486 14.4393C2.20486 12.167 3.513 10.1553 5.55205 9.20399C6.25773 9.66257 7.09723 9.9318 7.99962 9.9318C8.90542 9.9318 9.74814 9.66077 10.4555 9.19896C11.0642 9.4863 11.6283 9.87292 12.0978 10.3421C13.1926 11.4372 13.7956 12.8924 13.7956 14.4393C13.7956 14.7949 14.0836 15.0833 14.4396 15.0833C14.7955 15.0833 15.0835 14.7949 15.0835 14.4393C15.0835 12.5484 14.3465 10.77 13.0083 9.43155C12.5606 8.98354 12.0401 8.5994 11.4818 8.2827C12.122 7.50424 12.5071 6.50847 12.5071 5.42427C12.5071 2.93878 10.4848 0.916748 7.99962 0.916748C5.51444 0.916748 3.49209 2.93878 3.49209 5.42427C3.49209 6.50584 3.87564 7.49917 4.51301 8.27681C2.30252 9.52136 0.916992 11.8467 0.916992 14.4393ZM7.99962 2.20461C9.77483 2.20461 11.2193 3.64906 11.2193 5.42427C11.2193 7.19949 9.77483 8.64393 7.99962 8.64393C6.2244 8.64393 4.77996 7.19949 4.77996 5.42427C4.77996 3.64906 6.2244 2.20461 7.99962 2.20461Z" fill="white"/>
+                        </svg>
                         <span>
                             Log in
                         </span>
                     </a>
                 </div>
             </div>
-            <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-                <span class="burger__line"></span>
-            </button>
+            <div class="mobile-menu" data-menu>
+                <div class="mobile-menu__container">
+                    <a href="/" class="logo">
+                        <img src="/images/icon/logo.svg" alt="RebateMarkets logo">
+                    </a>
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li>
+                                <a href="#">Yacht charter</a>
+                            </li>
+                            <li>
+                                <a href="#">Regions</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Our team
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    About us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    FAQ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="socials">
+                        <span>Follow us on:</span>
+                        <ul class="list-reset list">
+                            <li class="list__item">
+                                <a href="#" class="list__link" target="_blank">
+                                    <svg class="icon instagram">
+                                        <use xlink:href="images/sprite.svg#inst"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link" target="_blank">
+                                    <svg class="icon twitter">
+                                        <use xlink:href="images/sprite.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link" target="_blank">
+                                    <svg class="icon youtube">
+                                        <use xlink:href="images/sprite.svg#youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link" target="_blank">
+                                    <svg class="icon facebook">
+                                        <use xlink:href="images/sprite.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-main btn-main--login">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.916992 14.4393C0.916992 14.7949 1.205 15.0833 1.56092 15.0833C1.91685 15.0833 2.20486 14.7949 2.20486 14.4393C2.20486 12.167 3.513 10.1553 5.55205 9.20399C6.25773 9.66257 7.09723 9.9318 7.99962 9.9318C8.90542 9.9318 9.74814 9.66077 10.4555 9.19896C11.0642 9.4863 11.6283 9.87292 12.0978 10.3421C13.1926 11.4372 13.7956 12.8924 13.7956 14.4393C13.7956 14.7949 14.0836 15.0833 14.4396 15.0833C14.7955 15.0833 15.0835 14.7949 15.0835 14.4393C15.0835 12.5484 14.3465 10.77 13.0083 9.43155C12.5606 8.98354 12.0401 8.5994 11.4818 8.2827C12.122 7.50424 12.5071 6.50847 12.5071 5.42427C12.5071 2.93878 10.4848 0.916748 7.99962 0.916748C5.51444 0.916748 3.49209 2.93878 3.49209 5.42427C3.49209 6.50584 3.87564 7.49917 4.51301 8.27681C2.30252 9.52136 0.916992 11.8467 0.916992 14.4393ZM7.99962 2.20461C9.77483 2.20461 11.2193 3.64906 11.2193 5.42427C11.2193 7.19949 9.77483 8.64393 7.99962 8.64393C6.2244 8.64393 4.77996 7.19949 4.77996 5.42427C4.77996 3.64906 6.2244 2.20461 7.99962 2.20461Z" fill="white"/>
+                        </svg>
+                        <span>
+                            Log in
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="header__bottom">
             <div class="header__left">
-                <a href="mailto:rebate.markets@gmail.com" class="contacts__link contacts__link--mail">
-                    rebate.markets@gmail.com
+                <a href="mailto:examplemail@gmail.com" class="header__link header__link--mail">
+                    examplemail@gmail.com
                 </a>
-                <a href="tel:+XXXXXXXXXXXX" class="contacts__link contacts__link--phone">
-                    + XX-XXXXXXXXXX (Free)
+                <a href="tel:+XXXXXXXXXXXX" class="header__link header__link--phone">
+                    +XX XXXX XXX XXX
                 </a>
                 <div class="socials">
+                    <span>Follow us on:</span>
                     <ul class="list-reset list">
                         <li class="list__item">
                             <a href="#" class="list__link" target="_blank">
@@ -98,43 +185,6 @@
                         <span>EN</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="mobile-menu" data-menu>
-            <div class="mobile-menu__container">
-                <a href="/" class="logo">
-                    <img src="/images/icon/logo.svg" alt="RebateMarkets logo">
-                </a>
-                <nav class="nav">
-                    <ul class="menu">
-                        <li>
-                            <a href="#">Yacht charter</a>
-                        </li>
-                        <li>
-                            <a href="#">Regions</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Our team
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                About us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                FAQ
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>

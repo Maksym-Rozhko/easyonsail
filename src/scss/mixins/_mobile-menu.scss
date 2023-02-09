@@ -23,40 +23,14 @@
 
     .nav {
         margin-top: 25px;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
         display: block;
 
         ul {
             flex-direction: column;
 
-            &:first-child {
-                align-items: flex-start;
-
-                li:not(:last-child) a {
-                    border-right: none;
-                }
-
-                a {
-                    font-size: 18px;
-                }
-
-                li {
-                    &:hover>.nav-child{
-                        display: block;
-                    }
-                }
-            }
-            .nav-child {
-                position: static;
-                display: none;
-                background-color: transparent;
-                margin-left: 20px;
-                padding: 0;
-
-                .nav-child {
-                    margin-left: 10px;
-                    padding-left: 0;
-                }
+            a {
+                font-size: 18px;
             }
         }
     }
