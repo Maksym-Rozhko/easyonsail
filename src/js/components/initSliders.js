@@ -1,34 +1,29 @@
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
-Swiper.use([Navigation, Pagination, Autoplay]);
+import Swiper, { Navigation } from 'swiper';
+Swiper.use([Navigation]);
 
-new Swiper('.swiper.main-slider', {
-    slidesPerView: 1,
-    spaceBetween: 20,
+new Swiper('.swiper.ragions__slider', {
+    slidesPerView: 3,
+    spaceBetween: 0,
     speed: 1000,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
+    // loop: true,
 
     navigation: {
-        nextEl: '.main-slider__btns .swiper-button-next',
-        prevEl: '.main-slider__btns .swiper-button-prev',
+        nextEl: '.regions__btns.swiper-button-next',
+        prevEl: '.regions__btns.swiper-button-prev',
     },
 
-    pagination: {
-        el: '.main-slider__controls.swiper-pagination',
-        clickable: true,
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        575: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
     },
-
-    // breakpoints: {
-    //     320: {
-    //       slidesPerView: 1,
-    //       spaceBetween: 20,
-    //     },
-    //     992: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 20,
-    //     },
-    // },
 });

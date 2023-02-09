@@ -150,3 +150,109 @@
         }
     }
 }
+
+.regions {
+    position: relative;
+    padding: 140px 0;
+
+    &__top {
+        @include flex-all-sb;
+        align-items: flex-end;
+        margin-bottom: 25px;
+
+
+        span {
+            font-weight: 500;
+            font-size: 11.0407px;
+            line-height: 13px;
+            letter-spacing: 0.26em;
+            color: var(--cs-dark);
+        }
+        h2 {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+    }
+
+    .controls {
+        @include flex-v-center;
+        flex-direction: row-reverse;
+        gap: 15px;
+    }
+
+    &__btns {
+        @include flex-all-center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--cs-dark);
+        border-radius: 50%;
+        position: static;
+        margin: 0;
+
+        &::after {
+            color: var(--cs-dark);
+            font-size: 10px;
+        }
+
+    }
+
+    .region {
+        max-width: 580px;
+
+        &__info {
+            @include flex-all-center;
+            margin-top: 20px;
+
+            span {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 98.5%;
+                letter-spacing: -0.05em;
+                color: var(--cs-dark);
+            }
+
+            a {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 160%;
+                letter-spacing: -0.05em;
+                color: var(--cs-dark);
+                margin-left: 20px;
+                padding-left: 20px;
+                padding-right: 35px;
+                border-left: 1px solid rgba(18, 34, 61, 0.2);
+                position: relative;
+                transition: all ease-in-out .4s;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 22px;
+                    height: 22px;
+                    background-image: url('../images/icon/circle-arrow.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    filter: invert(1);
+                    transition: all ease-in-out .4s;
+                }
+
+                &:hover {
+                    color: var(--cs-accent-1);
+
+                    &::after {
+                        transform: translateX(5px) translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

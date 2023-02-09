@@ -25,6 +25,9 @@
             }
         }
     }
+    .regions {
+        padding: 100px 0;
+    }
 }
 
 @include tablet {
@@ -49,6 +52,16 @@
             }
             h3 {
                 font-size: 30px;
+            }
+        }
+    }
+    .regions {
+        padding: 70px 0;
+
+        &__top {
+            h2 {
+                font-size: 30px;
+                margin-top: 20px;
             }
         }
     }
@@ -119,6 +132,15 @@
             }
             &:not(:last-child)::after {
                 content: none;
+            }
+        }
+    }
+    .regions {
+        padding: 50px 0;
+
+        &__top {
+            h2 {
+                font-size: 24px;
             }
         }
     }
