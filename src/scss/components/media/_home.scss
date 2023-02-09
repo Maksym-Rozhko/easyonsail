@@ -38,7 +38,8 @@
             }
         }
     }
-    .regions {
+    .regions,
+    .categories {
         padding: 100px 0;
     }
 }
@@ -68,7 +69,8 @@
             }
         }
     }
-    .regions {
+    .regions,
+    .categories {
         padding: 70px 0;
 
         &__top {
@@ -153,12 +155,24 @@
             }
         }
     }
-    .regions {
+    .regions,
+    .categories {
         padding: 50px 0;
 
         &__top {
             h2 {
                 font-size: 24px;
+            }
+        }
+    }
+    .categories {
+        .category {
+            max-width: inherit;
+
+            &__images {
+                img {
+                    width: 100%;
+                }
             }
         }
     }

@@ -27,3 +27,33 @@ new Swiper('.swiper.ragions__slider', {
           },
     },
 });
+
+new Swiper('.swiper.categories__slider', {
+    slidesPerView: 4,
+    spaceBetween: 5,
+    speed: 1000,
+
+    navigation: {
+        nextEl: '.categories__btns.swiper-button-next',
+        prevEl: '.categories__btns.swiper-button-prev',
+    },
+
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 5,
+        },
+        575: {
+          slidesPerView: 2,
+          spaceBetween: 5,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+        },
+        1280: {
+            slidesPerView: 4,
+            spaceBetween: 5,
+        },
+    },
+});

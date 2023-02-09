@@ -285,3 +285,124 @@
         }
     }
 }
+
+.categories {
+    position: relative;
+    padding: 140px 0;
+
+    &__top {
+        @include flex-all-sb;
+        align-items: flex-end;
+        margin-bottom: 25px;
+
+
+        span {
+            font-weight: 500;
+            font-size: 11.0407px;
+            line-height: 13px;
+            letter-spacing: 0.26em;
+            color: var(--cs-dark);
+        }
+        h2 {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+    }
+
+    .controls {
+        @include flex-v-center;
+        flex-direction: row-reverse;
+        gap: 15px;
+    }
+
+    &__btns {
+        @include flex-all-center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--cs-dark);
+        border-radius: 50%;
+        position: static;
+        margin: 0;
+
+        &::after {
+            color: var(--cs-dark);
+            font-size: 10px;
+        }
+
+    }
+
+    .category {
+        padding-top: 5px;
+        background-color: #F8FAFF;
+        max-width: 431px;
+        display: block;
+
+        &__images {
+            position: relative;
+
+            .img-main {
+                position: relative;
+                z-index: 11;
+                display: block;
+                transition: all ease-in-out .4s;
+            }
+
+            .img-hover {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 30px 20px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            position: relative;
+            transition: color ease-in-out .4s;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background-image: url('../images/icon/circle-arrow.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                right: 20px;
+                top: 50%;
+                opacity: .5;
+                transform: translateY(-50%);
+                filter: invert(1);
+                transition: all ease-in-out .4s;
+            }
+        }
+
+        &:hover {
+            .category__images {
+                .img-main {
+                    opacity: 0;
+                }
+            }
+
+            h3 {
+                color: var(--cs-accent-1);
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
