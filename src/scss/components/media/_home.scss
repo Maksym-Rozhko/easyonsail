@@ -18,6 +18,13 @@
             }
         }
     }
+    .stats {
+        .info {
+            &:not(:last-child) {
+                padding-right: 80px;
+            }
+        }
+    }
 }
 
 @include tablet {
@@ -31,6 +38,17 @@
                 max-width: 350px;
                 margin-top: 70px;
                 margin-bottom: 20px;
+            }
+        }
+    }
+    .stats {
+        .info {
+            &:not(:last-child) {
+                padding-right: 40px;
+                margin-right: 40px;
+            }
+            h3 {
+                font-size: 30px;
             }
         }
     }
@@ -48,6 +66,17 @@
             }
             p {
                 margin-bottom: 30px;
+            }
+        }
+    }
+    .stats {
+        .info {
+            &:not(:last-child) {
+                padding-right: 20px;
+                margin-right: 20px;
+            }
+            h3 {
+                font-size: 24px;
             }
         }
     }
@@ -74,6 +103,23 @@
         .widget-small {
             max-width: inherit;
             width: 100%;
+        }
+    }
+    .stats {
+        &__container {
+            flex-direction: column;
+        }
+        .info {
+            text-align: center;
+
+            &:not(:last-child) {
+                padding-right: 0;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            &:not(:last-child)::after {
+                content: none;
+            }
         }
     }
 };

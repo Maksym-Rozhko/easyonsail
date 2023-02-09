@@ -103,3 +103,50 @@
         }
     }
 }
+
+.stats {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(18, 34, 61, 0.1);
+
+    &__container {
+        @include flex-all-sb;
+        max-width: 1378px;
+        margin: 0 auto;
+    }
+
+    .info {
+        position: relative;
+
+        &:not(:last-child) {
+            padding-right: 147px;
+        }
+
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 60px;
+            background-color: rgba(18, 34, 61, 0.1);
+            right: 0;
+            bottom: 0;
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            margin-top: 27px;
+            margin-bottom: 15px;
+        }
+        span {
+            font-family: 'Graphik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 100%;
+            color: var(--cs-grey);
+        }
+    }
+}
