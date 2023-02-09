@@ -75,15 +75,24 @@
     backdrop-filter: blur(20px);
 }
 
-@mixin title {
-    font-family: 'Prosto One', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 100%;
-    letter-spacing: -0.02em;
-    margin-top: 0;
-    margin-bottom: 0;
+@mixin circle-arrow {
+    position: relative;
+    transition: color ease-in-out .4s;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icon/circle-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all ease-in-out .4s;
+    }
 }
 
 @mixin socials {

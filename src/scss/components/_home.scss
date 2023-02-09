@@ -54,23 +54,9 @@
             color: var(--cs-light);
             padding-right: 37px;
             max-width: fit-content;
-            position: relative;
             transition: all ease-in-out .4s;
+            @include circle-arrow;
 
-            &::after {
-                content: "";
-                position: absolute;
-                width: 24px;
-                height: 24px;
-                background-image: url('../images/icon/circle-arrow.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: auto;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: all ease-in-out .4s;
-            }
 
             &:hover {
                 color: var(--cs-accent-1);
@@ -226,23 +212,13 @@
                 padding-left: 20px;
                 padding-right: 35px;
                 border-left: 1px solid rgba(18, 34, 61, 0.2);
-                position: relative;
                 transition: all ease-in-out .4s;
+                @include circle-arrow;
 
                 &::after {
-                    content: "";
-                    position: absolute;
                     width: 22px;
                     height: 22px;
-                    background-image: url('../images/icon/circle-arrow.svg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: contain;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
                     filter: invert(1);
-                    transition: all ease-in-out .4s;
                 }
 
                 &:hover {
@@ -368,24 +344,13 @@
             line-height: 98.5%;
             letter-spacing: -0.05em;
             color: var(--cs-dark);
-            position: relative;
             transition: color ease-in-out .4s;
+            @include circle-arrow;
 
             &::after {
-                content: "";
-                position: absolute;
-                width: 24px;
-                height: 24px;
-                background-image: url('../images/icon/circle-arrow.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
                 right: 20px;
-                top: 50%;
                 opacity: .5;
-                transform: translateY(-50%);
                 filter: invert(1);
-                transition: all ease-in-out .4s;
             }
         }
 
@@ -401,6 +366,100 @@
 
                 &::after {
                     opacity: 1;
+                }
+            }
+        }
+    }
+
+    .show-all {
+        display: block;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        letter-spacing: -0.05em;
+        color: var(--cs-dark);
+        padding-right: 37px;
+        transition: color ease-in-out .4s;
+        @include circle-arrow;
+
+        &::after {
+            width: 22px;
+            height: 22px;
+            right: 2px;
+            filter: invert(1);
+        }
+
+        &:hover {
+            color: var(--cs-accent-1);
+        }
+    }
+}
+
+.deals {
+    padding-top: 16px;
+    padding-bottom: 70px;
+
+    &__container {
+        @include flex-v-center;
+    }
+
+    &__content {
+        max-width: 652px;
+        margin-left: 90px;
+
+        span {
+            font-family: 'Graphik', sans-serif;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 12px;
+            letter-spacing: 0.26em;
+            color: var(--cs-dark);
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            margin-top: 121px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-family: 'Graphik', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 180%;
+            color: var(--cs-grey);
+            margin-top: 0;
+            margin-bottom: 60px;
+            max-width: 593px;
+        }
+
+        a {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            padding-right: 37px;
+            transition: color ease-in-out .4s;
+            @include circle-arrow;
+
+            &::after {
+                filter: invert(1);
+            }
+
+            &:hover {
+                color: var(--cs-accent-1);
+
+                &::after {
+                    transform: translateX(5px) translateY(-50%);
                 }
             }
         }
