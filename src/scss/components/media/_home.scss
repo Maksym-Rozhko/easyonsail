@@ -1,3 +1,16 @@
+@include big-desktop {
+    .blocks {
+        &__container {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            max-width: fit-content;
+            margin: 0 auto;
+        }
+    }
+
+}
+
 @include small-desktop {
     .main-screen {
         &__content {
@@ -91,6 +104,11 @@
             h3 {
                 font-size: 24px;
             }
+        }
+    }
+    .blocks {
+        &__container {
+            grid-template-columns: 1fr;
         }
     }
 }
