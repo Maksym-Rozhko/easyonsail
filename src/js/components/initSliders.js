@@ -57,3 +57,25 @@ new Swiper('.swiper.categories__slider', {
         },
     },
 });
+
+new Swiper('.swiper.blogs__slider', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    speed: 1000,
+
+    navigation: {
+        nextEl: '.blogs__btns.swiper-button-next',
+        prevEl: '.blogs__btns.swiper-button-prev',
+    },
+
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+    },
+});

@@ -309,7 +309,6 @@
             color: var(--cs-dark);
             font-size: 10px;
         }
-
     }
 
     .category {
@@ -583,6 +582,194 @@
                 padding-bottom: 56px;
                 border-bottom: 1px solid rgba(18, 34, 61, 0.1);
             }
+        }
+    }
+}
+
+.banner {
+    padding: 100px 0;
+    background-image: url('../images/home/banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__container {
+        max-width: 882px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: -0.05em;
+        margin-top: 0;
+        margin-bottom: 40px;
+        color: var(--cs-light);
+
+        span {
+            color: var(--cs-accent-2);
+        }
+    }
+
+    a {
+        @include btn-main;
+        @include btn-gold;
+        @include waves;
+        @include waves-gold;
+        max-width: 220px;
+        color: var(--cs-grey);
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 98.5%;
+        letter-spacing: -0.05em;
+    }
+}
+
+.blogs {
+    position: relative;
+    padding: 120px 0;
+
+    &__top {
+        @include flex-all-sb;
+        align-items: flex-end;
+        margin-bottom: 25px;
+
+
+        span {
+            font-weight: 500;
+            font-size: 11.0407px;
+            line-height: 13px;
+            letter-spacing: 0.26em;
+            color: var(--cs-dark);
+        }
+        h2 {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+    }
+
+    .controls {
+        @include flex-v-center;
+        flex-direction: row-reverse;
+        gap: 15px;
+    }
+
+    &__btns {
+        @include flex-all-center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--cs-dark);
+        border-radius: 50%;
+        position: static;
+        margin: 0;
+
+        &::after {
+            color: var(--cs-dark);
+            font-size: 10px;
+        }
+
+    }
+
+    .blog {
+        background-color: var(--white);
+        padding: 5px 6px;
+        display: flex;
+        align-items: center;
+        max-width: 865px;
+
+        .img-wrap {
+            display: block;
+            overflow: hidden;
+            min-width: 325px;
+
+            img {
+                transition: all ease-in-out .4s;
+            }
+        }
+
+        &__info {
+            max-width: 354px;
+            margin-left: 40px;
+
+            a {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 98.5%;
+                letter-spacing: -0.05em;
+                color: var(--cs-dark);
+                display: block;
+                margin-bottom: 10px;
+                transition: color ease-in-out .4s;
+            }
+
+            span {
+                font-family: 'Graphik', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 180%;
+                color: var(--cs-dark);
+                opacity: .5;
+            }
+
+            p {
+                font-family: 'Graphik', sans-serif;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 180%;
+                margin-top: 40px;
+                margin-bottom: 0;
+                color: var(--cs-grey);
+            }
+        }
+
+        &:hover {
+            .img-wrap {
+                img {
+                    transform: scale(1.3);
+                }
+            }
+
+            .blog__info {
+                a {
+                    color: var(--cs-accent-1);
+                }
+            }
+        }
+    }
+
+    .show-all {
+        display: block;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        letter-spacing: -0.05em;
+        color: var(--cs-dark);
+        padding-right: 37px;
+        transition: color ease-in-out .4s;
+        @include circle-arrow;
+
+        &::after {
+            width: 22px;
+            height: 22px;
+            right: 2px;
+            filter: invert(1);
+        }
+
+        &:hover {
+            color: var(--cs-accent-1);
         }
     }
 }

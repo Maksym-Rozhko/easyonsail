@@ -6,6 +6,8 @@
     text-align: center;
     color: var(--cs-light);
     padding: 19px 10px;
+    overflow: hidden;
+    position: relative;
     transition: all ease-in-out .4s;
 }
 
@@ -19,6 +21,7 @@
         bottom: -3px;
         right: -1px;
         z-index: -1;
+        overflow: hidden;
 
         span {
             width: 34%;

@@ -8,7 +8,17 @@
             margin: 0 auto;
         }
     }
-
+    .blogs {
+        .blog {
+            &__info {
+                margin-left: 20px;
+                p {
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 }
 
 @include small-desktop {
@@ -39,7 +49,8 @@
         }
     }
     .regions,
-    .categories {
+    .categories,
+    .blogs {
         padding: 100px 0;
     }
     .deals {
@@ -55,6 +66,22 @@
 
             p {
                 margin-bottom: 30px;
+            }
+        }
+    }
+    .blogs {
+        .blog {
+            .img-wrap {
+                min-width: 300px;
+            }
+            &__info {
+                p {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
         }
     }
@@ -86,7 +113,8 @@
         }
     }
     .regions,
-    .categories {
+    .categories,
+    .blogs {
         padding: 70px 0;
 
         &__top {
@@ -105,6 +133,17 @@
             max-width: inherit;
             margin-left: 0;
             margin-bottom: 30px;
+        }
+    }
+    .blogs {
+        .blog {
+            max-width: inherit;
+            &__info {
+                max-width: 454px;
+                p {
+                    -webkit-line-clamp: 7;
+                }
+            }
         }
     }
 }
@@ -214,7 +253,8 @@
         }
     }
     .regions,
-    .categories {
+    .categories,
+    .blogs {
         padding: 50px 0;
 
         &__top {
@@ -241,6 +281,28 @@
 
                 &::after {
                     right: 10px;
+                }
+            }
+        }
+    }
+    .banner {
+        h2 {
+            font-size: 20px
+        }
+    }
+    .blogs {
+        .blog {
+            flex-direction: column;
+
+            .img-wrap {
+                min-width: 200px;
+            }
+            &__info {
+                margin-left: 0;
+                margin-top: 10px;
+
+                p {
+                    -webkit-line-clamp: 3;
                 }
             }
         }
