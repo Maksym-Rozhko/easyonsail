@@ -1,3 +1,130 @@
-@include mobile {
+@include small-desktop {
+    .above-footer {
+        &__menu {
+            margin-right: 25px;
+        }
+        .menu {
+            &__block {
+                padding: 79px 25px 60px 25px;
+            }
+        }
+    }
+}
 
+@include tablet {
+    .above-footer {
+        &__menu {
+            margin-right: 15px;
+        }
+        .menu {
+            &__block {
+                padding: 79px 15px 60px 15px;
+            }
+        }
+        .socials {
+            .list {
+                gap: 5px;
+            }
+        }
+    }
+    .footer {
+        .copyright {
+            margin-right: 70px;
+        }
+    }
+}
+
+@include small-tablet {
+    .above-footer {
+        padding-top: 50px;
+        padding-bottom: 20px;
+
+        &__container {
+            flex-direction: column;
+        }
+
+        &__block {
+            padding-top: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .logo {
+            margin: 0 auto;
+        }
+
+        &__menu {
+            margin: 0 auto;
+            width: 100%;
+            justify-content: space-between;
+            border: 1px solid rgba(237, 240, 248, 0.1);
+        }
+
+        .menu {
+            &__block {
+                padding: 50px 25px;
+                width: 100%;
+            }
+        }
+
+        .contacts {
+            padding-top: 25px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .socials {
+                order: 1;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .above-footer {
+        .menu {
+            &__block {
+                padding: 30px 15px;
+            }
+            &__title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .footer {
+        &__container {
+            flex-wrap: wrap;
+        }
+        &__link {
+            margin-right: 20px;
+        }
+    }
+}
+
+@include small-mobile {
+    .above-footer {
+        .menu {
+            &__block {
+                padding: 30px 5px;
+            }
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .socials {
+                order: inherit;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
 }
