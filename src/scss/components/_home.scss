@@ -835,6 +835,8 @@
     .swiper-scrollbar {
         background-color: rgba(18, 34, 61, 0.1);
         position: static;
+        width: 90%;
+        margin-left: 90px;
         margin-top: 40px;
         height: 2px;
         cursor: pointer;
@@ -960,5 +962,43 @@
             @include custom-checkbox;
             @include flex-v-center;
         }
+    }
+}
+
+.site-info {
+    background-color: #29354e;
+    backdrop-filter: blur(20px);
+    padding: 50px 0;
+
+    &__container {
+        @include flex-all-sb;
+        max-width: 1374px;
+        margin: 0 auto;
+
+        h4 {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--cs-light);
+        }
+    }
+
+    .rating__blocks,
+    .payment__logos {
+        @include flex-v-center;
+        gap: 15px;
+    }
+
+    .partners__logos {
+        display: flex;
+        align-items: flex-end;
+        gap: 15px;
+    }
+
+    .partners__logos img:last-child {
+        margin-bottom: 5px;
     }
 }

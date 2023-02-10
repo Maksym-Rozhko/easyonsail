@@ -89,6 +89,10 @@
         .review {
             max-width: 600px;
         }
+        .swiper-scrollbar {
+            margin-left: 30px;
+            width: 95%;
+        }
     }
     .subscribe {
         padding: 100px 0;
@@ -171,6 +175,13 @@
                     -webkit-line-clamp: 7;
                 }
             }
+        }
+    }
+    .site-info {
+        &__container {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
         }
     }
 }
@@ -343,6 +354,9 @@
                 line-height: 160%;
             }
         }
+        .swiper-scrollbar {
+            margin-left: 15px;
+        }
     }
     .subscribe {
         padding: 50px 0;
@@ -350,6 +364,11 @@
         h2 {
             margin-top: 20px;
             font-size: 30px;
+        }
+    }
+    .site-info {
+        .rating__blocks svg {
+            max-width: 150px
         }
     }
 };
