@@ -1,5 +1,5 @@
 const btnScrollUp = document.querySelector('.scroll-top');
-const topElem = document.querySelector('.main'); 
+const topElem = document.querySelector('.main');
 
 try {
   window.addEventListener('scroll', () => {

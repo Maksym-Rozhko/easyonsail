@@ -1,0 +1,152 @@
+.large-form {
+    margin-top: 112px;
+    background-color: var(--white);
+    backdrop-filter: blur(20px);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1495px;
+        margin: 0 auto;
+    }
+
+    .left-part,
+    .right-part {
+        padding: 140px 0;
+
+        h2 {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+    }
+
+    .left-part {
+        padding-right: 71px;
+        margin-right: 71px;
+        border-right: 1px solid rgba(18, 34, 61, 0.1);
+        flex-grow: 1;
+        max-width: 978px;
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 15px;
+        }
+    }
+
+    .right-part {
+        max-width: 446px;
+        width: 100%;
+    }
+
+    .form {
+        &-group {
+            margin-bottom: 15px;
+
+            &__textarea {
+                grid-column: 1 / 3;
+            }
+        }
+        label {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-dark);
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input,
+        select,
+        textarea {
+            background: rgba(18, 34, 61, 0.05);
+            backdrop-filter: blur(20px);
+            border: none;
+            padding: 14px 20px;
+            width: 100%;
+            font-family: 'Graphik', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 180%;
+
+            &::placeholder {
+                color: rgba(18, 34, 61, .5);
+            }
+        }
+
+        select {
+            appearance: none;
+            background-image: url('../images/icon/select-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center right 20px;
+            background-size: auto;
+            color: rgba(18, 34, 61, .5);
+        }
+
+        input,
+        textarea {
+            color: var(--cs-dark);
+        }
+
+        input[type=date] {
+            color: rgba(18, 34, 61, .5);
+            &::-webkit-calendar-picker-indicator {
+                background-image: url('../images/icon/calendar.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 18px 18px;
+                cursor: pointer;
+            }
+        }
+
+        textarea {
+            resize: none;
+            min-height: 140px;
+        }
+
+        .custom-checkbox {
+            @include custom-checkbox;
+
+            &__field {
+                background-color: transparent;
+                backdrop-filter: none;
+                padding: 0;
+            }
+
+            &__content {
+                color: var(--cs-dark);
+
+                &::before {
+                    border: 1px solid rgba(18, 34, 61, 0.2);
+                }
+            }
+        }
+
+        .btn-main {
+            @include btn-main;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 98.5%;
+            letter-spacing: -0.05em;
+            color: var(--cs-grey);
+            margin-top: 40px;
+            padding: 17px 10px;
+
+            &--gold {
+                @include btn-gold;
+            }
+
+            &--waves {
+                @include waves;
+                @include waves-gold;
+            }
+        }
+    }
+}

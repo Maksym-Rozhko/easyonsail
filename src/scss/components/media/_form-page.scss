@@ -1,0 +1,73 @@
+@include small-desktop {
+    .large-form {
+        .left-part {
+            padding-right: 35px;
+            margin-right: 35px;
+        }
+    }
+}
+
+@include tablet {
+    .large-form {
+        .left-part {
+            width: 100%;
+
+            .form {
+                grid-template-columns: 1fr;
+            }
+        }
+        .form {
+            &-group {
+                &__textarea {
+                    grid-column: inherit;
+                }
+            }
+        }
+    }
+}
+
+
+@include small-tablet {
+    .large-form {
+        &__container {
+            flex-direction: column;
+        }
+        .left-part,
+        .right-part {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            max-width: inherit;
+        }
+
+        .left-part {
+            border-right: 0;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(18, 34, 61, 0.1);
+            padding-right: 0;
+            margin-right: 0;
+        }
+
+        .right-part {
+            padding-top: 35px;
+        }
+    }
+}
+
+
+@include small-tablet {
+    .large-form {
+        .left-part,
+        .right-part {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .left-part {
+            padding-bottom: 20px;
+        }
+
+        .right-part {
+            padding-top: 20px;
+        }
+    }
+}

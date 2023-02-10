@@ -71,6 +71,12 @@ a {
     @include footerToBottom;
 }
 
+.min-height6 {
+    .main {
+        min-height: 60vh;
+    }
+}
+
 .wrapper {
     margin: 0 auto;
     padding: 0 var(--container-offset);
