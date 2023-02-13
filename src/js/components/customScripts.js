@@ -8,4 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    const regionsDescription = document.querySelector('.description-hidden');
+    const regionsReadMore = document.querySelector('.regions-description a');
+
+    if (regionsReadMore) {
+        regionsReadMore.addEventListener('click', e => {
+            regionsDescription.classList.toggle('text-hidden')
+        });
+    }
 });

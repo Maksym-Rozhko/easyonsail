@@ -1,5 +1,7 @@
 @include small-desktop {
     .blogs-page {
+        padding-top: 140px;
+
         .blogs__container {
             .blog {
                 flex-direction: column;
