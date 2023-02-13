@@ -156,21 +156,27 @@
 }
 
 @mixin breadcrumbs {
-    font-family: '', sans-serif;
+    font-family: 'Graphik', sans-serif;
     @include flex-all-center;
     flex-wrap: wrap;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
     list-style: none;
-    padding-bottom: 15px;
+    padding-bottom: 40px;
     max-width: fit-content;
     margin: 0 auto;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 100%;
-    color: var(--cs-light-grey);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 180%;
+    color: var(--cs-dark);
     position: relative;
+
+    li {
+        span {
+            opacity: .5;
+        }
+    }
 
     &::before {
         content: "";
@@ -184,20 +190,25 @@
     }
 
     a {
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 100%;
-        color: var(--cs-light-grey);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 180%;
+        color: var(--cs-dark);
         transition: color ease-in-out .4s;
 
+        span {
+            opacity: 1;
+        }
+
         &:hover {
-            color: var(--cs-red);
+            color: var(--cs-accent-1);
         }
     }
 
     .divider {
         position: relative;
         margin: 0 10px;
+        opacity: 1;
 
         &::before {
             position: absolute;

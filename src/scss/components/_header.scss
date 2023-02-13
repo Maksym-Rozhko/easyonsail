@@ -252,5 +252,9 @@
 .fill-header {
     .header {
         background-color: var(--cs-dark);
+
+        &__bottom {
+            border-bottom: 1px solid rgba(18, 34, 61, 0.2);
+        }
     }
 }

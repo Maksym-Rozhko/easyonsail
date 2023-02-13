@@ -1,11 +1,11 @@
 <section class="large-form">
     <div class="wrapper">
-        <div class="large-form__container">
+        <form accept="#" class="large-form__container" method="POST">
             <div class="left-part">
                 <h2>
                     Free quote
                 </h2>
-                <form action="#" class="form" method="POST">
+                <div class="form">
                     <div class="form-group">
                         <label>
                             Country:
@@ -52,18 +52,18 @@
                       <input type="checkbox" class="custom-checkbox__field">
                       <span class="custom-checkbox__content">Captain needed</span>
                     </label>
-                </form>
+                </div>
             </div>
             <div class="right-part">
                 <h2>
                     How to contact you
                 </h2>
-                <form action="#" class="form" method="POST">
+                <div class="form">
                     <div class="form-group">
                         <label>
                             Your name*
                         </label>
-                        <input type="text" name="name" placeholder="Your name*">
+                        <input type="text" name="name" placeholder="Your name*" required>
                     </div>
                     <div class="form-group">
                         <label>
@@ -75,7 +75,7 @@
                         <label>
                             Your phone*
                         </label>
-                        <input type="tel" name="phone" placeholder="+380 (__) __-__-____">
+                        <input type="tel" name="phone" placeholder="+380 (__) __-__-____" required>
                     </div>
                     <button class="btn-reset btn-main btn-main--gold btn-main--waves" type="submit">
                         Send
@@ -85,8 +85,8 @@
                             <span></span>
                         </div>
                     </button>
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </section>

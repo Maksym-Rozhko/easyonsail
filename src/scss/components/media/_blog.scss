@@ -1,0 +1,60 @@
+@include small-tablet {
+    .blog-page {
+        .leave-reply {
+            &__container {
+                padding: 45px 40px 70px 40px;
+            }
+        }
+    }
+}
+
+
+@include mobile {
+    .blog-page {
+        &__container {
+            padding: 1px 5px 55px 5px;
+        }
+        .one-blog {
+            margin-top: 35px;
+
+            h1,
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                margin: 15px 0;
+                font-size: 14px;
+            }
+
+            &__image-wrap {
+                margin-bottom: 35px;
+            }
+
+            ul {
+                margin-bottom: 35px;
+                li {
+                    font-size: 14px;
+                }
+            }
+
+            .blogs {
+                margin-top: 35px;
+
+                .blog {
+                    max-width: inherit;
+
+                    .img-wrap {
+                        max-width: inherit;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .leave-reply {
+            &__container {
+                padding: 25px 20px 50px 20px;
+            }
+        }
+    }
+}
