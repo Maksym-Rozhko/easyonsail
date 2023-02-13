@@ -58,14 +58,14 @@ new Swiper('.swiper.categories__slider', {
     },
 });
 
-new Swiper('.swiper.blogs__slider', {
+new Swiper('.blogs-home .swiper.blogs__slider', {
     slidesPerView: 2,
     spaceBetween: 10,
     speed: 1000,
 
     navigation: {
-        nextEl: '.blogs__btns.swiper-button-next',
-        prevEl: '.blogs__btns.swiper-button-prev',
+        nextEl: '.blogs-home .blogs__btns.swiper-button-next',
+        prevEl: '.blogs-home .blogs__btns.swiper-button-prev',
     },
 
     breakpoints: {
@@ -109,3 +109,92 @@ new Swiper('.swiper.reviews__slider', {
         draggable: true,
     },
 });
+
+new Swiper('.cat1 .swiper.blogs__slider', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    speed: 1000,
+
+    navigation: {
+        nextEl: '.cat1 .blogs__btns.swiper-button-next',
+        prevEl: '.cat1 .blogs__btns.swiper-button-prev',
+    },
+
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+    },
+});
+
+new Swiper('.cat2 .swiper.blogs__slider', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    speed: 1000,
+
+    navigation: {
+        nextEl: '.cat2 .blogs__btns.swiper-button-next',
+        prevEl: '.cat2 .blogs__btns.swiper-button-prev',
+    },
+
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+    },
+});
+
+new Swiper('.cat3 .swiper.blogs__slider', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    speed: 1000,
+
+    navigation: {
+        nextEl: '.cat3 .blogs__btns.swiper-button-next',
+        prevEl: '.cat3 .blogs__btns.swiper-button-prev',
+    },
+
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+    },
+});
+
+new Swiper('.same-blog .swiper.blogs__slider', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    speed: 1000,
+
+    navigation: {
+        nextEl: '.same-blog .blogs__btns.swiper-button-next',
+        prevEl: '.same-blog .blogs__btns.swiper-button-prev',
+    },
+
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        575: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+    },
+});
+
