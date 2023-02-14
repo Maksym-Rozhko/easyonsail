@@ -1,0 +1,244 @@
+@include small-desktop {
+    .region-page {
+        padding-top: 140px;
+
+        .region-slide {
+            img {
+                min-height: 450px;
+            }
+        }
+
+        .region-content {
+            .yachts {
+                .yachts__container {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            .weather {
+
+                &__container {
+                    gap: 15px 70px;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .region-page {
+        .anchors {
+            margin-bottom: 60px;
+
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .region-content {
+            .yachts {
+                .yachts__container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            .weather {
+                &__container {
+                    gap: 15px;
+                }
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .region-page {
+        .region-slide {
+            &__content {
+                max-width: 500px;
+
+                h3 {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .region__slider {
+            .region__btns {
+                &.swiper-button-next {
+                    right: 10px;
+                }
+
+                &.swiper-button-prev {
+                    left: 10px;
+                }
+            }
+        }
+
+        .region-content {
+            .region-stats {
+                padding-left: 0;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px 20px;
+
+                li {
+                    padding-left: 10px;
+
+                    span {
+                        &:first-child {
+                            margin-bottom: 5px;
+                            font-size: 13px;
+                        }
+                        &:last-child {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+
+            ul {
+                padding-left: 15px;
+            }
+
+            .guide {
+                ol {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .airports {
+                margin-top: 35px;
+                .plane {
+                    max-width: inherit;
+                }
+            }
+
+            .weather {
+                &__container {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .region-page {
+        padding-bottom: 50px;
+
+        h1 {
+            font-size: 30px;
+        }
+        .region-slide {
+            &__content {
+                padding: 0 15px;
+
+                h3 {
+                    font-size: 20px;
+                }
+            }
+            img {
+                min-height: 350px;
+            }
+        }
+
+        .region__slider {
+            .region__btns {
+                display: none;
+            }
+        }
+        .anchors {
+            ul {
+                grid-template-columns: 1fr;
+
+                a {
+                    min-height: inherit;
+                }
+            }
+        }
+        .region-content {
+            h2 {
+                margin-top: 35px;
+                font-size: 20px;
+            }
+            p {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+            .region-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+
+            ul {
+                li {
+                    font-size: 14px;
+                }
+            }
+
+            .guide {
+                ol {
+                    li {
+                        padding: 16px 100px 16px 15px;
+
+                        span {
+                            &:first-child {
+                                font-size: 14px;
+                            }
+                            &:last-child {
+                                width: 70px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .yachts {
+                &__top {
+                    margin-top: 35px;
+                }
+
+                &__links {
+                    ul {
+                        gap: 10px;
+
+                        li {
+                            &:last-child {
+                                margin-left: 0px;
+                            }
+                        }
+
+                        a {
+                            padding: 5px 10px;
+                            font-size: 14px;
+
+                            span {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+
+                .yachts__container {
+                    grid-template-columns: 1fr;
+                }
+
+                .yacht {
+                    max-width: inherit;
+
+                    &__image-wrap {
+                        img {
+                            max-height: 300px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .airports {
+                .plane {
+                    padding: 20px 10px;
+                }
+            }
+        }
+    }
+}
