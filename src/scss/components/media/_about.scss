@@ -1,0 +1,131 @@
+@include small-desktop {
+    .about-page {
+
+        .info {
+            &__titles {
+                flex-direction: column;
+                h2,
+                p {
+                    max-width: inherit;
+                }
+            }
+        }
+        .history {
+            h3 {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .about-page {
+        .history {
+            padding-top: 45px;
+            padding-bottom: 35px;
+            flex-direction: column;
+
+            &__content {
+                max-width: inherit;
+            }
+
+            &.reverse {
+                flex-direction: column;
+            }
+        }
+        .advantages {
+            padding-top: 45px;
+            padding-bottom: 90px;
+            flex-direction: column;
+
+            &__content {
+                max-width: inherit;
+
+                h2 {
+                    margin-bottom: 35px;
+                }
+
+                ul {
+                    li {
+                        p {
+                            max-width: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .about-page {
+        &__image {
+            margin-bottom: 45px;
+
+            img {
+                min-height: 400px;
+            }
+        }
+        .info {
+            &__titles {
+                h2 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+@include mobile {
+    .about-page {
+        .info {
+            &__titles {
+                h2 {
+                    font-size: 22px;
+                }
+            }
+        }
+        .history {
+            &__content {
+                h3 {
+                    font-size: 22px;
+                }
+            }
+            &__images {
+                min-width: inherit;
+            }
+        }
+        .stats {
+            .info {
+                &:not(:last-child) {
+                    border-right: none;
+                }
+            }
+        }
+        .advantages {
+            padding-bottom: 40px;
+
+            &__content {
+                h2 {
+                    font-size: 22px;
+                }
+                ul {
+                    li {
+                        gap: 10px;
+
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+            &__image {
+                min-width: inherit;
+            }
+        }
+    }
+}

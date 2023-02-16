@@ -1,0 +1,182 @@
+.about-page {
+    padding-top: 180px;
+
+    h1 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 98.5%;
+        letter-spacing: -0.05em;
+        color: var(--cs-dark);
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .breadcrumb {
+        @include breadcrumbs;
+    }
+
+    &__image {
+        margin-bottom: 90px;
+
+        img {
+            width: 100%;
+            max-height: 874px;
+        }
+    }
+
+    .info {
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(18, 34, 61, 0.1);
+
+        &__titles {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+
+            h2 {
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 98.5%;
+                letter-spacing: -0.05em;
+                color: var(--cs-dark);
+                margin-top: 0;
+                margin-bottom: 0;
+                max-width: 356px;
+            }
+            p {
+                font-family: 'Graphik', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 180%;
+                color: var(--cs-dark);
+                margin-top: 0;
+                margin-bottom: 0;
+                max-width: 760px;
+            }
+        }
+    }
+
+    .history {
+        @include flex-all-sb;
+        max-width: 1650px;
+        gap: 25px;
+        padding-top: 90px;
+        padding-bottom: 70px;
+
+        &__content {
+            max-width: 760px;
+
+            h3 {
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 98.5%;
+                letter-spacing: -0.05em;
+                color: var(--cs-dark);
+                margin-top: 0;
+                margin-bottom: 70px;
+            }
+
+            p {
+                font-family: 'Graphik', sans-serif;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 180%;
+                color: var(--cs-grey);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            ul {
+                padding-left: 15px;
+                li {
+                    font-family: 'Graphik', sans-serif;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 180%;
+                    color: var(--cs-grey);
+
+                    &::marker {
+                        color: var(--cs-accent-2);
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        &__images {
+            min-width: 500px;
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .stats {
+        border-bottom: 0;
+        .info {
+            border-bottom: 0;
+            &:not(:last-child) {
+                border-right: 1px solid rgba(18, 34, 61, 0.1);
+            }
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    .advantages {
+        @include flex-all-sb;
+        gap: 25px;
+        padding-top: 90px;
+        padding-bottom: 140px;
+
+        &__content {
+            max-width: 780px;
+
+            h2 {
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 98.5%;
+                letter-spacing: -0.05em;
+                margin-top: 0;
+                margin-bottom: 70px;
+                color: var(--cs-dark);
+            }
+
+            ul {
+                li {
+                    @include flex-v-center;
+                    gap: 25px;
+                    font-family: 'Graphik', sans-serif;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 180%;
+                    color: var(--cs-grey);
+
+                    &:not(:last-child) {
+                        padding-bottom: 15px;
+                        margin-bottom: 40px;
+                        border-bottom: 1px solid rgba(18, 34, 61, 0.1);
+                    }
+                    svg {
+                        min-width: 50px;
+                    }
+                    p {
+                        max-width: 620px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &__image {
+            min-width: 500px;
+        }
+    }
+}

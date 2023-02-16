@@ -7,6 +7,7 @@
     right: 0;
     z-index: 111;
     transition: all ease-in-out .4s;
+    background-color: var(--cs-dark);
     cursor: default;
 
     .logo {
@@ -50,7 +51,8 @@
         position: absolute;
         width: 100%;
         top: 70px;
-        transition: all ease-in-out .4s
+        transition: all ease-in-out .4s;
+        border-bottom: 1px solid rgba(18, 34, 61, 0.2);
     }
 
     .nav {
@@ -249,12 +251,12 @@
     }
 }
 
-.fill-header {
+.home-header {
     .header {
-        background-color: var(--cs-dark);
+        background-color: transparent;
 
         &__bottom {
-            border-bottom: 1px solid rgba(18, 34, 61, 0.2);
+            border-bottom: none;
         }
     }
 }
