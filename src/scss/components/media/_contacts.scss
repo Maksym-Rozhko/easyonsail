@@ -1,0 +1,53 @@
+@include tablet {
+    .contacts {
+        .info {
+            padding: 35px;
+
+            h1 {
+                font-size: 30px;
+                margin-bottom: 40px;
+            }
+        }
+        .subscribe {
+            padding: 40px 0;
+
+            &__container {
+                margin: 0 25px;
+            }
+        }
+
+        .widget-small {
+            padding: 30px 10px;
+            width: 100%;
+            max-width: 400px;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .contacts {
+        margin-bottom: 70px;
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .subscribe {
+            &__container {
+                max-width: inherit;
+            }
+        }
+
+        .widget-small {
+            max-width: inherit;
+        }
+    }
+}
