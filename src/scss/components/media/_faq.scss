@@ -1,0 +1,45 @@
+@include tablet {
+    .faq-page {
+        .faq {
+            &__container {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .faq-page {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .faq {
+            &__container {
+                padding-bottom: 100px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .faq-page {
+        .faq {
+            &__container {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 70px;
+            }
+        }
+        .faqs {
+            &__item--active {
+                .faqs__question {
+                    margin-bottom: 20px;
+                }
+                .faqs__answer {
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+}
