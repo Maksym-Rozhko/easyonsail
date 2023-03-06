@@ -3,9 +3,16 @@
         &__container {
             display: grid;
             justify-content: center;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             max-width: fit-content;
             margin: 0 auto;
+        }
+    }
+    .stats {
+        .info {
+            &:not(:last-child) {
+                padding-right: 50px;
+            }
         }
     }
     .blogs {
@@ -17,6 +24,14 @@
                     font-size: 14px;
                 }
             }
+        }
+    }
+}
+
+@include middle-tablet {
+    .blocks {
+        &__container {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
@@ -43,8 +58,17 @@
     }
     .stats {
         .info {
+            h3 {
+                font-size: 30px;
+            }
+            &__descript {
+                font-size: 14px;
+            }
+            &:not(:first-child) {
+                padding-left: 15px;
+            }
             &:not(:last-child) {
-                padding-right: 80px;
+                padding-right: 30px;
             }
         }
     }
@@ -212,11 +236,6 @@
             }
         }
     }
-    .blocks {
-        &__container {
-            grid-template-columns: 1fr;
-        }
-    }
     .deals {
         padding-bottom: 50px;
 
@@ -280,7 +299,11 @@
         .info {
             text-align: center;
 
+            &:not(:first-child) {
+                padding-left: 0;
+            }
             &:not(:last-child) {
+                padding-left: 0;
                 padding-right: 0;
                 margin-right: 0;
                 margin-bottom: 15px;
@@ -299,6 +322,11 @@
             h2 {
                 font-size: 24px;
             }
+        }
+    }
+    .blocks {
+        &__container {
+            grid-template-columns: 1fr;
         }
     }
     .categories {
