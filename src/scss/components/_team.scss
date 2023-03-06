@@ -1,0 +1,39 @@
+.team {
+    padding-top: 180px;
+
+    h2 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 98.5%;
+        text-align: center;
+        letter-spacing: -0.05em;
+        color: var(--cs-dark);
+    }
+
+    .breadcrumb {
+        @include breadcrumbs;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .person {
+        &__content {
+            padding: 30px 20px;
+        }
+        h3 {
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        span {
+            font-family: 'Graphik', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 100%;
+            color: rgba(18, 34, 61, 0.5);
+        }
+    }
+}
