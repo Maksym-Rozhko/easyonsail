@@ -1,0 +1,39 @@
+@include small-desktop {
+    .team {
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .person {
+            h3 {
+                &::after {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .team {
+        padding-top: 140px;
+
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include small-tablet {
+    .team {
+        h2 {
+            font-size: 30px;
+        }
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        .person {
+            margin: 0 auto;
+        }
+    }
+}
