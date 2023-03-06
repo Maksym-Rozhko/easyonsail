@@ -1,0 +1,149 @@
+@media (max-width: 1550px) {
+    .person {
+        &__container {
+            gap: 40px;
+        }
+
+        &__content {
+            .licenses {
+                gap: 35px;
+            }
+        }
+    }
+}
+
+@include big-desktop {
+    .person {
+        &__container {
+            padding-right: 30px;
+        }
+        h2 {
+            font-size: 36px;
+        }
+        &__content {
+            padding-top: 65px;
+
+            .licenses {
+                margin-top: 35px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .info {
+                padding-bottom: 40px;
+            }
+            .person-about {
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
+
+@include small-desktop {
+    .person {
+        &__container {
+            grid-template-columns: 1fr;
+            padding-bottom: 100px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .position {
+            display: block;
+            text-align: center;
+        }
+        &__slider {
+            justify-content: center;
+        }
+        &__content {
+            padding-top: 0;
+
+            .licenses {
+                flex-direction: row;
+                gap: 90px;
+            }
+        }
+    }
+}
+
+@include middle-tablet {
+    .person {
+        .person-main {
+            max-height: 630px;
+            max-width: 400px;
+        }
+        .person-thumbs {
+            max-height: 630px;
+        }
+        .person-main img {
+            min-height: 630px;
+            min-width: 400px;
+            max-width: 400px;
+            max-height: 630px;
+        }
+    }
+}
+
+@include small-tablet {
+    .person {
+        .person-main {
+            max-height: 430px;
+            max-width: 300px;
+        }
+        .person-thumbs {
+            max-height: 430px;
+        }
+        .person-main img {
+            min-height: 430px;
+            min-width: 300px;
+            max-width: 300px;
+            max-height: 430px;
+        }
+
+        .person-thumbs img {
+            min-height: 210px;
+        }
+    }
+}
+
+@include mobile {
+    .person {
+        &__container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        .person-main {
+            max-height: 350px;
+            max-width: 250px;
+        }
+        .person-main img {
+            min-height: 350px;
+            min-width: 250px;
+            max-width: 250px;
+            max-height: 350px;
+        }
+        .person-thumbs {
+            display: none;
+        }
+        &__content {
+            .licenses {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .info__wrapp {
+                grid-template-columns: 1fr 2fr;
+                gap: 0 10px;
+            }
+            .person-contacts {
+                .call-me {
+                    max-width: 120px;
+                }
+            }
+        }
+    }
+}

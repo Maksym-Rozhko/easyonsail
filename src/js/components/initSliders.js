@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Scrollbar, Mousewheel, Pagination } from 'swiper';
-Swiper.use([Navigation, Scrollbar, Mousewheel, Pagination]);
+import Swiper, { Navigation, Scrollbar, Mousewheel, Pagination, Thumbs, FreeMode} from 'swiper';
+Swiper.use([Navigation, Scrollbar, Mousewheel, Pagination, Thumbs, FreeMode]);
 
 new Swiper('.swiper.ragions__slider', {
     slidesPerView: 3,
@@ -244,3 +244,41 @@ new Swiper('.swiper.airports__slider', {
     },
 });
 
+const personMain = new Swiper(".swiper.person-thumbs", {
+    loop: true,
+    spaceBetween: 10,
+    initialSlide: 1,
+    slidesPerView: 4,
+    freeMode: true,
+    direction: 'vertical',
+    watchSlidesProgress: true,
+
+    breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        }
+    },
+});
+
+new Swiper(".swiper.person-main", {
+    loop: true,
+    speed: 1000,
+    initialSlide: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".person-main .swiper-button-next",
+      prevEl: ".person-main .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: personMain,
+    },
+});
