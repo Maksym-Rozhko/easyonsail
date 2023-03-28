@@ -35,5 +35,13 @@
             line-height: 100%;
             color: rgba(18, 34, 61, 0.5);
         }
+
+        .category__images {
+            img {
+                max-height: 574px;
+                width: 100%;
+                min-height: 574px;
+            }
+        }
     }
 }

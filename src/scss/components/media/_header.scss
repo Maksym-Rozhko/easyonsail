@@ -8,7 +8,7 @@
             padding-right: 30px;
         }
         .logo {
-            padding-right: 90px;
+            padding-right: 70px;
         }
 
         .nav {
@@ -21,6 +21,9 @@
 
 @include small-desktop {
     .header {
+        .logo {
+            padding-right: 170px;
+        }
         &__right {
             max-width: 280px;
         }

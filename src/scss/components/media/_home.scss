@@ -1,3 +1,30 @@
+@media (max-width: 1750px) {
+    .subscribe {
+        background-size: 900px 100%;
+
+        &__container {
+            max-width: 531px;
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 1550px) {
+    .stats {
+        .info:not(:last-child) {
+            padding-right: 35px;
+        }
+    }
+    .blocks {
+        .block {
+            min-height: 135px;
+        }
+    }
+    .subscribe {
+        background-size: 700px 100%;
+    }
+}
+
 @include big-desktop {
     .blocks {
         &__container {
@@ -328,6 +355,9 @@
     .blocks {
         &__container {
             grid-template-columns: 1fr;
+        }
+        .block {
+            min-height: inherit;
         }
     }
     .categories {

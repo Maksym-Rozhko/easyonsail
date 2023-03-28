@@ -890,7 +890,7 @@
     background-image: url('../images/home/subscribe-bg.jpg');
     background-repeat: no-repeat;
     background-position: right;
-    background-size: auto;
+    background-size: contain;
     background-color: var(--cs-accent-2);
 
     &__container {
@@ -978,6 +978,10 @@
         .custom-checkbox {
             @include custom-checkbox;
             @include flex-v-center;
+
+            &__content {
+                max-width: 420px;
+            }
         }
     }
 }
